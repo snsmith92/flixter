@@ -1,7 +1,26 @@
 @import "bootstrap";
 
 h1, h2, h3, h4, h5, h6, .navbar {
+
   margin: 0;
+}
+
+.registration_box{
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background-color: white;
+  border-color: black;
+  margin-top: 10px;
+  margin-bottom: 15px; 
+  padding: 20px; 
+}
+
+.registration_box h2 {
+  font-family: "Helvetica Neue", Helvetica;
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 30px;
 }
 
 body{
@@ -62,5 +81,12 @@ a.navbar-brand{
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.form-inputs{
+  font-family: "Helvetica Neue", Helvetica;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 15px;
 }
 

@@ -1,7 +1,6 @@
 @import "bootstrap";
 
 h1, h2, h3, h4, h5, h6, .navbar {
-
   margin: 0;
 }
 
@@ -14,6 +13,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin-top: 10px;
   margin-bottom: 15px; 
   padding: 20px; 
+}
+
+.registration_box h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  letter-spacing: 6px;
+  font-weight: 75;
+  font-size: 35px;
 }
 
 .registration_box h2 {

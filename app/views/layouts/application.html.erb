@@ -15,8 +15,8 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+        <%= link_to "FLIXTER", root_path, class:'navbar-brand' %>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">FLIXTER</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span </span></a>
@@ -61,11 +61,10 @@
   </div>
 
     <div id="footer">
-
       <div class="container">
-        <b> Footer Here </b>
+        <b> Teachers </b>
         <br />
-        <%= link_to 'Link', '#' %>
+        <%= link_to 'Add a Course', new_instructor_course_path %>
       </div>
     </div>
 

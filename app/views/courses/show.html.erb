@@ -1,0 +1,25 @@
+<br />
+
+<div class="registration_box col-10 offset-1">
+  <h2 class="text-center"> <%= @course.title %> </h2>
+  <br />
+  <div class = "row">
+    <div class = "col-sm-4 col-12 text-center">
+      <span class="badge badge-primary"> 
+        <%= number_to_currency @course.cost %>
+      </span>
+
+      <% if current_user && current_user == @course.user %>
+      <br />
+      <br />
+        <%= link_to "Administer Course", instructor_course_path(@course), class: "btn btn-success btn-large" %>
+        <br />
+        <br />
+      <% end %>    
+    </div>
+
+    <div class = "col-sm-8 col-12">
+      <p> <%= @course.description %> </p>
+    </div>
+  </div>
+</div>

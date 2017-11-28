@@ -6,14 +6,14 @@
   <br />
 
   <% @courses.each do |course| %>
-    <h4><%= course.title %> </h4>
+    <h4><%= link_to course.title, course_path(course) %> </h4>
     <br />
     <div class = "row">
       <div class = "col-sm-8 col-12">
-        <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", '#' %> </p>
+        <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", course_path(course) %> </p>
       </div>
       <div class = "col-sm-4 col-12 text-center">
-        <%= link_to 'Button', '#', class: "btn btn-primary btn-large" %>
+        <%= link_to 'Read More', course_path(course), class: "btn btn-primary btn-large" %>
       </div>
     </div>
     <br class="clr" />

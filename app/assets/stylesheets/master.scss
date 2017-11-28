@@ -38,6 +38,7 @@ p{
   font-family: "Helvetica", Helvetica;
   font-weight: 100;
   font-size: 15px;
+  text-align: justify;
 }
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
@@ -113,4 +114,13 @@ a.navbar-brand{
 
 .clr{
   clear: both;
+}
+
+.badge {
+  border-radius:0;
+  font-family: "Helvetica Neue", Helvetica Neue;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-size: 15px ;
+  padding: 5px;
 }

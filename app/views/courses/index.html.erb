@@ -1,0 +1,21 @@
+<br />
+
+<div class="registration_box col-10 offset-1">
+  <h1 class="text-center"> Learn Something New Today </h1>
+  <hr />
+  <br />
+
+  <% @courses.each do |course| %>
+    <h4><%= course.title %> </h4>
+    <br />
+    <div class = "row">
+      <div class = "col-sm-8 col-12">
+        <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", '#' %> </p>
+      </div>
+      <div class = "col-sm-4 col-12 text-center">
+        <%= link_to 'Button', '#', class: "btn btn-primary btn-large" %>
+      </div>
+    </div>
+    <br class="clr" />
+  <% end %>
+</div>

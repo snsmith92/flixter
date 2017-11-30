@@ -1,17 +1,31 @@
 <br />
 <div class= "registration_box col-10 offset-1">
-  <h1 class="text-center"> <%= @course.title %></h1>
+  <h2 class="text-center"> <%= @course.title %></h2>
   <br />
-  <%= link_to 'Preview As A Student...', course_path(@course), class: 'btn btn-warning float-right' %>
+  <%= link_to 'Preview As A Student...', course_path(@course), class: 'btn btn-info btn-sm float-right' %>
   <br class = "clr" />
-  <div class = "text-center">
-    <%= link_to "Add A New Section", new_instructor_course_section_path(@course), class: 'btn btn-primary btn-lg' %>
+  <br />
+  <div class = "float-right">
+    <%= link_to "Add A New Section", new_instructor_course_section_path(@course), class: 'btn btn-info btn-sm' %>
   </div>
 
+  <br />
   <ul>
     <% @course.sections.each do |section| %>
       <li>
-        <%= section.title %>
+        <h6><%= section.title %> </h6>
+        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-success btn-sm' %>
+        <br />
+        <ul>
+          <% section.lessons.each do |lesson| %>
+            <li>
+              <p> <%= lesson.title %>
+              -
+              <i><small> <%= lesson.subtitle %> </small></i> </p>
+            </li>
+          <% end %>
+        </ul>
+        <br class="clr" />
       </li>
     <% end %>
   </ul>

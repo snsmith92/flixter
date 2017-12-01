@@ -1,14 +1,34 @@
 <br />
 <div class= "registration_box col-10 offset-1">
-  <h2 class="text-center"> <%= current_course.title %></h2>
-  <br />
-  <%= link_to 'Preview As A Student...', course_path(current_course), class: 'btn btn-info btn-sm float-right' %>
+  <div class = "container">
+    <div class = "row" >
+      <div class = "col-sm-2 col-12"> 
+        <%= image_tag current_course.image, class: 'instructor-course-image' %>
+      </div>
+      <div class = 'col-sm-8 col-12'>
+        <br />
+        <h2> <%= current_course.title %></h2>
+        <br />
+      </div>
+      <div class = 'col-sm-2 col-12'>
+        <br />
+        <%= link_to 'Preview As A Student...', course_path(current_course), class: 'btn btn-info btn-sm float-right' %>        
+        <br />
+        <br />
+        <%= link_to "Add A New Section", new_instructor_course_section_path(current_course), class: 'btn btn-info btn-sm float-right' %>        
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <br />
+  # <%= link_to 'Preview As A Student...', course_path(current_course), class: 'btn btn-info btn-sm float-right' %>
   <br class = "clr" />
   <br />
   <div class = "float-right">
     <%= link_to "Add A New Section", new_instructor_course_section_path(current_course), class: 'btn btn-info btn-sm' %>
   </div>
-
+ -->
   <br />
   <ul>
     <% current_course.sections.each do |section| %>

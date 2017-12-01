@@ -8,14 +8,28 @@
   <% @courses.each do |course| %>
     <h4><%= link_to course.title, course_path(course) %> </h4>
     <br />
-    <div class = "row">
-      <div class = "col-sm-8 col-12">
-        <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", course_path(course) %> </p>
+    <% if course.image.present? %>
+      <div class = "row">        
+        <div class = "col-sm-2 col 12">
+          <%= image_tag course.image, class: 'index-course-image' %>
+        </div>
+        <div class = "col-sm-8 col-12">
+          <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", course_path(course) %> </p>
+        </div>
+        <div class = "col-sm-2 col-12 text-center">
+          <%= link_to 'Read More', course_path(course), class: "btn btn-primary" %>
+        </div>
       </div>
-      <div class = "col-sm-4 col-12 text-center">
-        <%= link_to 'Read More', course_path(course), class: "btn btn-primary btn-lg" %>
-      </div>
-    </div>
+    <% else %>
+      <div class = "row">
+        <div class = "col-sm-10 col-12">
+          <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", course_path(course) %> </p>
+        </div>
+        <div class = "col-sm-2 col-12 text-center">
+          <%= link_to 'Read More', course_path(course), class: "btn btn-primary" %>
+        </div>  
+      </div>    
+    <% end %> 
     <br class="clr" />
   <% end %>
 </div>

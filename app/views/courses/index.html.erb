@@ -14,7 +14,7 @@
           <%= image_tag course.image, class: 'index-course-image' %>
         </div>
         <div class = "col-sm-8 col-12">
-          <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", course_path(course) %> </p>
+          <p> <%= truncate(course.description, length: 400) %> <%=link_to "Read More", course_path(course) %> </p>
         </div>
         <div class = "col-sm-2 col-12 text-center">
           <%= link_to 'Read More', course_path(course), class: "btn btn-primary" %>
@@ -23,7 +23,7 @@
     <% else %>
       <div class = "row">
         <div class = "col-sm-10 col-12">
-          <p> <%= truncate(course.description, length: 180) %> <%=link_to "Read More", course_path(course) %> </p>
+          <p> <%= truncate(course.description, length: 400) %> <%=link_to "Read More", course_path(course) %> </p>
         </div>
         <div class = "col-sm-2 col-12 text-center">
           <%= link_to 'Read More', course_path(course), class: "btn btn-primary" %>

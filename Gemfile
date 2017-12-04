@@ -73,3 +73,6 @@ gem 'figaro'
 
 # Gem for Amazon Web Services
 gem "fog-aws"
+
+# Minimagick gem for image wrapping
+gem "mini_magick"

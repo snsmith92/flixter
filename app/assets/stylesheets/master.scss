@@ -38,7 +38,6 @@ p{
   font-family: "Helvetica", Helvetica;
   font-weight: 100;
   font-size: 15px;
-  text-align: justify;
 }
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
@@ -125,12 +124,49 @@ a.navbar-brand{
   padding: 5px;
 }
 
-.instructor-course-image{
+.instructor-course-image {
   width: max-width;
   height: 150px;
 }
 
-.index-course-image{
+.index-course-image {
   width: max-width;
   height: 100px;
+}
+
+.lesson {
+  background-color: #E2F2FF;
+  margin-top:10px;
+  padding: 10px;
+  height: 100px;
+}
+
+.lesson a {
+  color: black;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.lesson a:hover {
+  color: #8c8e91;
+  text-decoration: none;
+}
+
+.lesson a b {
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.section {
+  border: 1px solid;
+  border-color: black;
+  padding: 20px;
+}
+
+.section h4 {
+  font-family:"Helvetica Neue", Helvetica;
+  letter-spacing: 2px;
+  font-weight: 75;
 }

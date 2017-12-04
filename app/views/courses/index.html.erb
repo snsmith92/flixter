@@ -10,10 +10,10 @@
     <br />
     <% if course.image.present? %>
       <div class = "row">        
-        <div class = "col-sm-2 col 12">
+        <div class = "col-sm-3 col 12">
           <%= image_tag course.image, class: 'index-course-image' %>
         </div>
-        <div class = "col-sm-8 col-12">
+        <div class = "col-sm-7 col-12">
           <p> <%= truncate(course.description, length: 400) %> <%=link_to "Read More", course_path(course) %> </p>
         </div>
         <div class = "col-sm-2 col-12 text-center">

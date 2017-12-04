@@ -42,9 +42,11 @@
         <ul>
           <% section.lessons.each do |lesson| %>
             <li>
-              <p> <%= lesson.title %>
-              -
-              <i><small> <%= lesson.subtitle %> </small></i> </p>
+              <%= link_to lesson_path(lesson) do %>
+                <p> <%= lesson.title %>
+                -
+                <i><small> <%= lesson.subtitle %> </small></i> </p>
+              <% end %>
             </li>
           <% end %>
         </ul>

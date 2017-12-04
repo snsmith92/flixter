@@ -76,3 +76,6 @@ gem "fog-aws"
 
 # Minimagick gem for image wrapping
 gem "mini_magick"
+
+# Carrierwave for image upload to Amazon Web Services
+gem 'carrierwave-aws'

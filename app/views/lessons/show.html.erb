@@ -3,7 +3,9 @@
 <div class="registration_box col-10 offset-1">
   <h2 class="text-center"><%= current_lesson.title %></h2>
   <br />
-  <h6 class = "text-center">
-    <%= current_lesson.subtitle %>
-  </h6>
+  <h5 class = "text-center">
+    <i><%= current_lesson.subtitle %></i>
+  </h5>
+  <br />
+  <%= current_lesson.video.to_s %>
 </div>

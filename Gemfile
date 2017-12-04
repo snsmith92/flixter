@@ -68,3 +68,8 @@ gem 'devise'
 # Add carrierwave gem to allow image upload
 gem 'carrierwave', '~> 1.0'
 
+# Add Figaro gem for secure configuration storage
+gem 'figaro'
+
+# Gem for Amazon Web Services
+gem "fog-aws"

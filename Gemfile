@@ -82,3 +82,6 @@ gem 'carrierwave-aws'
 
 # Stripe gem for accepting payments
 gem 'stripe'
+
+# Ranked model gem for ordering of lessons
+gem 'ranked-model'

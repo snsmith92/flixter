@@ -85,3 +85,6 @@ gem 'stripe'
 
 # Ranked model gem for ordering of lessons
 gem 'ranked-model'
+
+# Add jquery ui
+gem 'jquery-ui-rails'

@@ -79,3 +79,6 @@ gem "mini_magick"
 
 # Carrierwave for image upload to Amazon Web Services
 gem 'carrierwave-aws'
+
+# Stripe gem for accepting payments
+gem 'stripe'

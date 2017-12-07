@@ -33,6 +33,9 @@
         <br />
         <br />       
       </div>
+      <div class = "col-12">
+      <p> <%= current_course.description %> </p>
+      </div>
     </div>
 
     <div class = "text-center"> 
@@ -50,25 +53,33 @@
   </div>
  -->
   <br />
-  <ul>
+
+  <div class = "col-12">
     <% current_course.sections.each do |section| %>
-      <li>
-        <h6><%= section.title %> </h6>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-success btn-sm' %>
+      <div class = "section">
+        <h4> 
+          <%= section.title %> 
+          <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-success btn-sm' %>
+        </h4>
         <br />
-        <ul class = "lessons">
+        <div class = "row lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson)%>">
-              <%= link_to lesson_path(lesson) do %>
-                <p> <%= lesson.title %>
-                -
-                <i><small> <%= lesson.subtitle %> </small></i> </p>
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
-        <br class="clr" />
-      </li>
+            <div class="col-12 col-sm-6">
+              <div class = "lesson text-center">
+                <li data-update-url="<%= instructor_lesson_path lesson%>">
+                  <%= link_to lesson_path(lesson) do %>
+                    <b><%= lesson.title %> </b>
+                    <br />
+                    <small><%= lesson.subtitle %></small>
+                  <% end %>
+                </li>
+              </div>
+            </div>          
+            <% end %>  
+        </div>
+        <br class = "clr" />
+    </div>
+    <br />    
     <% end %>
-  </ul>
+  </div>
 </div>

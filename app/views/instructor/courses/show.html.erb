@@ -38,8 +38,10 @@
     <div class = "row" >
       <div class = 'col-sm-10 col-12'>
         <br />
+        <div class = "float-left"> 
+        <%= image_tag current_course.image, class: 'instructor-course-image' %>
+        </div>
         <h2> <%= current_course.title %></h2>
-        <br />
       </div>
       <div class = 'col-sm-2 col-12'>
         <br />
@@ -77,12 +79,9 @@
         <br />       
       </div>
       <div class = "col-12">
+      <br />
       <p> <%= current_course.description %> </p>
       </div>
-    </div>
-
-    <div class = "text-center"> 
-      <%= image_tag current_course.image, class: 'instructor-course-image' %>
     </div>
   </div>
 
@@ -105,15 +104,22 @@
         <ul class = "lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path lesson%>">
-              <p><span class="fa fa-arrows-v" aria-hidden="true"></span>
-              <%= link_to lesson_path(lesson) do %>
-                 <b>&nbsp;&nbsp;<%= lesson.title %></b>
-              </p>
-              <p>
-                <i><small> <%= lesson.subtitle %> </small></i> 
-              </p>
-              <hr />
-              <% end %>
+              <div class="row">
+                <div class = "col-1">
+                  <span class="fa fa-arrows-v" aria-hidden="true"></span>
+                </div>
+                <div class = "col-11">
+                  <p> 
+                    <%= link_to lesson_path(lesson) do %>
+                      <b><%= lesson.title %></b>
+                      </p>
+                      <p>
+                      <i><small> <%= lesson.subtitle %> </small></i> 
+                      </p>
+                    <hr />
+                  <% end %>
+                </div>
+              </div>            
             </li>
           <% end %>
         </ul>

@@ -13,8 +13,8 @@
         <%= number_to_currency @course.cost %>
       </span>
       <br />
+      <br />
       <% if current_user && current_user == @course.user %>
-        <br />
         <%= link_to "Administer", instructor_course_path(@course), class: "btn btn-success float-right" %>
         <br />
         <br />
@@ -30,14 +30,16 @@
             <br />
             <br />
           <% else %>
-            <%= form_tag course_enrollments_path(@course) do %>
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-email="<%=current_user.email %>"
-                      data-description="<%= @course.title %>"
-                      data-amount="<%=(@course.cost * 100).to_i %>"
-                      data-locale="auto"></script>
-            <% end %>
+            <div class = "float-right"
+              <%= form_tag course_enrollments_path(@course) do %>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                        data-email="<%=current_user.email %>"
+                        data-description="<%= @course.title %>"
+                        data-amount="<%=(@course.cost * 100).to_i %>"
+                        data-locale="auto"></script>
+              <% end %>
+            </div>
             <br /> 
           <% end %> 
         <% end %>

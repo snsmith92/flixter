@@ -179,6 +179,9 @@ ul {
 .section-li {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  margin: 20px;
+  background: #e5e8ea;
 }
 
 ul .header{
@@ -187,4 +190,27 @@ ul .header{
 
 ul .header {
   font-size: 20px;
+}
+
+.lessons li {
+  background: #e3f2fd;
+  color: black;
+  font-family:"Helvetica Neue", Helvetica;
+  font-weight: 100;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.lessons li b {
+  font-size: 15px;
+  font-weigt: 100;
+}
+
+.lessons li p {
+  margin: 0;
+}
+
+.lessons a {
+  text-decoration: none;
+  color: black
 }

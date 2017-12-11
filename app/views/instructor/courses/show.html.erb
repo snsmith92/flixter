@@ -72,19 +72,23 @@
   <ul class = "sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
       <li data-update-url="<%= instructor_section_path(section)%>", class="section-li">
+        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-success btn-sm' %>
         <div class= "header">
-          <h6><span class="fa fa-ellipsis-v" aria-hidden="true"></span>
+          <h6><span class="fa fa-arrows-v fa-4px" aria-hidden="true"></span>
           &nbsp;&nbsp;<%= section.title %> </h6>
         </div>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-success btn-sm' %>
+        <br class = "clr"/>
         <ul class = "lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path lesson%>">
-              <p><span class="fa fa-ellipsis-v" aria-hidden="true"></span>
+              <p><span class="fa fa-arrows-v" aria-hidden="true"></span>
               <%= link_to lesson_path(lesson) do %>
-                 <%= lesson.title %>
-                -
-                <i><small> <%= lesson.subtitle %> </small></i> </p>
+                 <b>&nbsp;&nbsp;<%= lesson.title %></b>
+              </p>
+              <p>
+                <i><small> <%= lesson.subtitle %> </small></i> 
+              </p>
+              <hr />
               <% end %>
             </li>
           <% end %>

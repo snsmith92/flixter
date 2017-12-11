@@ -9,25 +9,24 @@
   <br />
   <div class = "row">
     <div class = "col-sm-4 col-12 text-center">
-      <span class="badge badge-primary"> 
+      <span class="badge badge-primary float-right"> 
         <%= number_to_currency @course.cost %>
       </span>
-
+      <br />
       <% if current_user && current_user == @course.user %>
-      <br />
-      <br />
-        <%= link_to "Administer", instructor_course_path(@course), class: "btn btn-success" %>
+        <br />
+        <%= link_to "Administer", instructor_course_path(@course), class: "btn btn-success float-right" %>
         <br />
         <br />
       <% end %>
       <% if current_user %>
         <% if current_user.enrolled_in?(@course) %>       
-          <h3 class = "badge badge-primary"> You Are Enrolled! </h3>
+          <h3 class = "badge badge-primary float-right"> You Are Enrolled! </h3>
           <br />
           <br />
         <% else %> 
           <% if @course.free? %>
-            <%= link_to "Enroll for Free!", course_enrollments_path(@course), class: "btn btn-success btn-lg", method: :post %>
+            <%= link_to "Enroll for Free!", course_enrollments_path(@course), class: "btn btn-success btn-lg float-right", method: :post %>
             <br />
             <br />
           <% else %>
@@ -43,6 +42,7 @@
           <% end %> 
         <% end %>
       <% else %>
+        <br />
         <h3> <%= link_to "Sign Up to Enroll!", new_user_registration_path, class: 'btn btn-primary' %> </h3>  
         <br />
         <br />

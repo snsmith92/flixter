@@ -3,9 +3,18 @@
 <div class="registration_box col-10 offset-1">
   <h2 class="text-center"><%= current_lesson.title %></h2>
   <br />
-  <h5 class = "text-center">
-    <i><%= current_lesson.subtitle %></i>
-  </h5>
+  <p>
+    <i class = "float-left"><%= current_lesson.subtitle %></i>
+    <% if current_lesson.next_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-info float-right' do %>
+      Next Lesson
+      <span class="fa fa-forward"></span>
+    <% end %>
+  <% end %>
+  </p>
+  <br />
+
+  <br class = "clr" />
   <br />
 
   <div class = "wrapper">

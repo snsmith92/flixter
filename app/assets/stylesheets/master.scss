@@ -5,6 +5,12 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica Neue;
+  font-weight: 75;
+  letter-spacing: 3px;
+}
+
 .registration_box{
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -131,8 +137,8 @@ a.navbar-brand{
 }
 
 .index-course-image {
-  width: max-width;
-  height: 100px;
+  width: 150px;
+  height: max-height;
 }
 
 .lesson {
@@ -213,4 +219,33 @@ ul .header {
 .lessons a {
   text-decoration: none;
   color: black
+}
+
+.img-dashboard{
+  width: 200px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.course-title{
+  color: black;
+}
+
+.course-title a {
+  color: black;
+  text-decoration: none; 
+
+}
+
+.course-title a:hover {
+  color: #a4a6a8;
+  text-decoration: none;
+}
+
+.index-box {
+  border: 0.5px solid;
+  border-color: black;
+  padding: 10px;
+  margin: 20px;
+  background: #e3f2fd;
 }

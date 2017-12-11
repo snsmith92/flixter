@@ -39,13 +39,14 @@
                         data-amount="<%=(@course.cost * 100).to_i %>"
                         data-locale="auto"></script>
               <% end %>
+              <br />
             </div>
             <br /> 
           <% end %> 
         <% end %>
       <% else %>
         <br />
-        <h3> <%= link_to "Sign Up to Enroll!", new_user_registration_path, class: 'btn btn-primary' %> </h3>  
+        <h3> <%= link_to "Sign Up to Enroll!", new_user_registration_path, class: 'btn btn-primary float-right' %> </h3>  
         <br />
         <br />
       <% end %>    

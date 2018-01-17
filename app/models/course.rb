@@ -4,6 +4,7 @@ class Course < ApplicationRecord
   belongs_to :user
   has_many :sections
   has_many :enrollments
+  belongs_to :category
   
   validates :title, presence: true, length: {minimum: 5, maximum: 70}
   validates :description, presence: true, length: {minimum: 10}
